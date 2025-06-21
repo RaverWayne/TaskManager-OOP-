@@ -1,55 +1,68 @@
 ﻿Public Class Login
+    ' Handles the Login button click event
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        ' Validate inputs aren't empty
-        If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse
-           String.IsNullOrWhiteSpace(txtPassword.Text) Then
-            MessageBox.Show("Please enter both username and password",
-                          "Login Failed",
-                          MessageBoxButtons.OK,
-                          MessageBoxIcon.Error)
-            Return
+        ' --- Input Validation ---
+        If String.IsNullOrWhiteSpace(txtbUserName.Text) OrElse
+           String.IsNullOrWhiteSpace(txtbPassword.Text) Then
+            MessageBox.Show("Please enter both username and password.",
+                            "Login Failed",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
+            Return ' Stop execution if validation fails
         End If
 
+        ' --- Authentication Logic ---
         Dim dataService As New DataService()
-        Dim user = dataService.Authenticate(txtUsername.Text, txtPassword.Text)
+        Dim user = dataService.Authenticate(txtbUserName.Text, txtbPassword.Text)
 
         If user IsNot Nothing Then
-            ' Successful login
+            ' --- Successful Login ---
+            MessageBox.Show($"Welcome, {user.Username} ({user.Role})!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             Dim dashboard As New MainDashboard()
-            dashboard.CurrentUser = user
-            dashboard.Show()
-            Me.Hide()
+            Try
+                ' Pass the authenticated user object to the dashboard
+                dashboard.CurrentUser = user
+                dashboard.Show() ' Show the dashboard form
+                Me.Hide()        ' Hide the current login form
+            Catch ex As Exception
+                ' Catch any errors that occur specifically when opening the dashboard
+                MessageBox.Show($"An error occurred while preparing the dashboard: {ex.Message}", "Application Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Console.WriteLine($"ERROR: Exception when setting CurrentUser or showing Dashboard: {ex.Message}")
+                Console.WriteLine(ex.StackTrace)
+            End Try
         Else
-            ' Failed login
-            MessageBox.Show("Invalid credentials or no users registered yet",
-                          "Login Failed",
-                          MessageBoxButtons.OK,
-                          MessageBoxIcon.Error)
+            ' --- Failed Login ---
+            MessageBox.Show("Invalid credentials or no users registered yet. Please check your username and password.",
+                            "Login Failed",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
         End If
     End Sub
 
+    ' Handles the Register button click event
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Dim registerForm As New Register()
-        registerForm.Show()
-        Me.Hide()
+        registerForm.Show() ' Show the registration form
+        Me.Hide()           ' Hide the current login form
     End Sub
 
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
+    ' Optional: This handler was mentioned previously and is now correctly linked.
+    Private Sub txtbUserName_TextChanged(sender As Object, e As EventArgs) Handles txtbUserName.TextChanged
+        ' This handler is currently empty.
     End Sub
 
-    Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles txtPassword.Click
+    ' Optional: Clear fields when the form loads/activates for a clean start
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtbUserName.Clear()
+        txtbPassword.Clear()
     End Sub
 
-    Private Sub Label1_Click_2(sender As Object, e As EventArgs) Handles lblTaskManager.Click
+    Private Sub Login_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        ' This ensures fields are clear if you return to Login from Register/Dashboard
+        txtbUserName.Clear()
+        txtbPassword.Clear()
+        txtbUserName.Focus() ' Set focus to username for convenience
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-    End Sub
-
-    Private Sub Label1_Click_3(sender As Object, e As EventArgs) Handles lblWelcome.Click
-    End Sub
-
-    Private Sub Label1_Click_4(sender As Object, e As EventArgs)
-    End Sub
 End Class
