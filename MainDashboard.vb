@@ -246,4 +246,23 @@
         End If
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub txtTaskName_Click(sender As Object, e As EventArgs) Handles txtTaskName.Click
+
+    End Sub
+
+    Private Sub lblSelectRole_Click(sender As Object, e As EventArgs) Handles lblSelectRole.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub cbStudent_CheckedChanged(sender As Object, e As EventArgs) Handles cbStudent.CheckedChanged
+
+    End Sub
 End Class

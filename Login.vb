@@ -65,4 +65,21 @@
         txtbUserName.Focus() ' Set focus to username for convenience
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
+    End Sub
+
+    Private Sub lblWelcome_Click(sender As Object, e As EventArgs) Handles lblWelcome.Click
+
+    End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?",
+                                              "Exit Application",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
 End Class

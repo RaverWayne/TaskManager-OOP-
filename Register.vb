@@ -109,4 +109,83 @@
         Me.Close()
     End Sub
 
+    Private Sub txtAge_Click(sender As Object, e As EventArgs) Handles txtAge.Click
+
+    End Sub
+
+    Private Sub Picturebox2_Click(sender As Object, e As EventArgs) Handles Picturebox2.Click
+
+    End Sub
+
+    Private Sub lblWelcome_Click(sender As Object, e As EventArgs) Handles lblWelcome.Click
+
+    End Sub
+
+    Private Sub txtUsername_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
+
+    End Sub
+
+    Private Sub txtPassword_Click(sender As Object, e As EventArgs) Handles txtPassword.Click
+
+    End Sub
+
+    Private Sub txtbUserName_TextChanged(sender As Object, e As EventArgs) Handles txtbUserName.TextChanged
+
+    End Sub
+
+    Private Sub txtbPassword_TextChanged(sender As Object, e As EventArgs) Handles txtbPassword.TextChanged
+
+    End Sub
+
+    Private Sub lblRoles_Click(sender As Object, e As EventArgs) Handles lblRoles.Click
+
+    End Sub
+
+    Private Sub txtbAge_TextChanged(sender As Object, e As EventArgs) Handles txtbAge.TextChanged
+
+    End Sub
+
+    Private Sub lblGender_Click(sender As Object, e As EventArgs) Handles lblGender.Click
+
+    End Sub
+
+    Private Sub rbMale_CheckedChanged(sender As Object, e As EventArgs) Handles rbMale.CheckedChanged
+
+    End Sub
+
+    Private Sub rbFemale_CheckedChanged(sender As Object, e As EventArgs) Handles rbFemale.CheckedChanged
+
+    End Sub
+
+    Private Sub rbOther_CheckedChanged(sender As Object, e As EventArgs) Handles rbOther.CheckedChanged
+
+    End Sub
+
+    Private Sub cbStudent_CheckedChanged(sender As Object, e As EventArgs) Handles cbStudent.CheckedChanged
+
+    End Sub
+
+    Private Sub cbTeacher_CheckedChanged(sender As Object, e As EventArgs) Handles cbTeacher.CheckedChanged
+
+    End Sub
+
+    Private Sub cbEmployee_CheckedChanged(sender As Object, e As EventArgs) Handles cbEmployee.CheckedChanged
+
+    End Sub
+
+    Private Sub lblTaskManager_Click(sender As Object, e As EventArgs) Handles lblTaskManager.Click
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub dtpBirthday_ValueChanged(sender As Object, e As EventArgs) Handles dtpBirthday.ValueChanged
+
+    End Sub
+
+    Private Sub lblBirthday_Click(sender As Object, e As EventArgs) Handles lblBirthday.Click
+
+    End Sub
 End Class

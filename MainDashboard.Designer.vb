@@ -38,7 +38,6 @@ Partial Class MainDashboard
         Me.cbStudent = New System.Windows.Forms.CheckBox()
         Me.cbTeacher = New System.Windows.Forms.CheckBox()
         Me.cbEmployee = New System.Windows.Forms.CheckBox()
-        Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblAddTask = New System.Windows.Forms.Label()
         Me.lblYourTask = New System.Windows.Forms.Label()
@@ -55,7 +54,7 @@ Partial Class MainDashboard
         '
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.Font = New System.Drawing.Font("Bell MT", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(462, 22)
+        Me.lblWelcome.Location = New System.Drawing.Point(483, 9)
         Me.lblWelcome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(371, 52)
@@ -65,6 +64,7 @@ Partial Class MainDashboard
         'btnAddTask
         '
         Me.btnAddTask.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddTask.ForeColor = System.Drawing.Color.Black
         Me.btnAddTask.Location = New System.Drawing.Point(610, 515)
         Me.btnAddTask.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddTask.Name = "btnAddTask"
@@ -76,6 +76,7 @@ Partial Class MainDashboard
         'btnRemove
         '
         Me.btnRemove.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRemove.ForeColor = System.Drawing.Color.Black
         Me.btnRemove.Location = New System.Drawing.Point(132, 515)
         Me.btnRemove.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRemove.Name = "btnRemove"
@@ -87,6 +88,7 @@ Partial Class MainDashboard
         'btnEdit
         '
         Me.btnEdit.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.ForeColor = System.Drawing.Color.Black
         Me.btnEdit.Location = New System.Drawing.Point(290, 515)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEdit.Name = "btnEdit"
@@ -98,7 +100,8 @@ Partial Class MainDashboard
         'btnLogout
         '
         Me.btnLogout.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(1047, 22)
+        Me.btnLogout.ForeColor = System.Drawing.Color.Black
+        Me.btnLogout.Location = New System.Drawing.Point(1003, 658)
         Me.btnLogout.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(208, 39)
@@ -129,10 +132,10 @@ Partial Class MainDashboard
         'lblHistory
         '
         Me.lblHistory.AutoSize = True
-        Me.lblHistory.BackColor = System.Drawing.SystemColors.Info
+        Me.lblHistory.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.lblHistory.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblHistory.Font = New System.Drawing.Font("Bell MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHistory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblHistory.ForeColor = System.Drawing.Color.White
         Me.lblHistory.Location = New System.Drawing.Point(987, 207)
         Me.lblHistory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblHistory.Name = "lblHistory"
@@ -143,7 +146,8 @@ Partial Class MainDashboard
         'btnSearch
         '
         Me.btnSearch.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(1081, 108)
+        Me.btnSearch.ForeColor = System.Drawing.Color.Black
+        Me.btnSearch.Location = New System.Drawing.Point(1062, 98)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(149, 39)
@@ -153,7 +157,7 @@ Partial Class MainDashboard
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(864, 116)
+        Me.TextBox1.Location = New System.Drawing.Point(838, 108)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(209, 22)
@@ -162,10 +166,10 @@ Partial Class MainDashboard
         'txtTaskName
         '
         Me.txtTaskName.AutoSize = True
-        Me.txtTaskName.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.txtTaskName.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.txtTaskName.Font = New System.Drawing.Font("Bell MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTaskName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.txtTaskName.Location = New System.Drawing.Point(523, 282)
+        Me.txtTaskName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.txtTaskName.Location = New System.Drawing.Point(530, 282)
         Me.txtTaskName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtTaskName.Name = "txtTaskName"
         Me.txtTaskName.Size = New System.Drawing.Size(133, 28)
@@ -183,9 +187,10 @@ Partial Class MainDashboard
         'lblTaskDate
         '
         Me.lblTaskDate.AutoSize = True
-        Me.lblTaskDate.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.lblTaskDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.lblTaskDate.Font = New System.Drawing.Font("Bell MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTaskDate.Location = New System.Drawing.Point(532, 324)
+        Me.lblTaskDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.lblTaskDate.Location = New System.Drawing.Point(541, 326)
         Me.lblTaskDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTaskDate.Name = "lblTaskDate"
         Me.lblTaskDate.Size = New System.Drawing.Size(124, 28)
@@ -195,8 +200,9 @@ Partial Class MainDashboard
         'cbStudent
         '
         Me.cbStudent.AutoSize = True
-        Me.cbStudent.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.cbStudent.Location = New System.Drawing.Point(677, 380)
+        Me.cbStudent.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.cbStudent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.cbStudent.Location = New System.Drawing.Point(694, 380)
         Me.cbStudent.Margin = New System.Windows.Forms.Padding(4)
         Me.cbStudent.Name = "cbStudent"
         Me.cbStudent.Size = New System.Drawing.Size(74, 20)
@@ -207,8 +213,9 @@ Partial Class MainDashboard
         'cbTeacher
         '
         Me.cbTeacher.AutoSize = True
-        Me.cbTeacher.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.cbTeacher.Location = New System.Drawing.Point(677, 408)
+        Me.cbTeacher.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.cbTeacher.ForeColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.cbTeacher.Location = New System.Drawing.Point(694, 408)
         Me.cbTeacher.Margin = New System.Windows.Forms.Padding(4)
         Me.cbTeacher.Name = "cbTeacher"
         Me.cbTeacher.Size = New System.Drawing.Size(80, 20)
@@ -219,8 +226,9 @@ Partial Class MainDashboard
         'cbEmployee
         '
         Me.cbEmployee.AutoSize = True
-        Me.cbEmployee.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.cbEmployee.Location = New System.Drawing.Point(677, 436)
+        Me.cbEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.cbEmployee.ForeColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.cbEmployee.Location = New System.Drawing.Point(694, 436)
         Me.cbEmployee.Margin = New System.Windows.Forms.Padding(4)
         Me.cbEmployee.Name = "cbEmployee"
         Me.cbEmployee.Size = New System.Drawing.Size(91, 20)
@@ -228,27 +236,21 @@ Partial Class MainDashboard
         Me.cbEmployee.Text = "Employee"
         Me.cbEmployee.UseVisualStyleBackColor = False
         '
-        'HScrollBar1
-        '
-        Me.HScrollBar1.Location = New System.Drawing.Point(434, 261)
-        Me.HScrollBar1.Name = "HScrollBar1"
-        Me.HScrollBar1.Size = New System.Drawing.Size(39, 244)
-        Me.HScrollBar1.TabIndex = 24
-        '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(52, 86)
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 80)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1203, 546)
+        Me.PictureBox1.Size = New System.Drawing.Size(1299, 556)
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
         'lblAddTask
         '
         Me.lblAddTask.AutoSize = True
-        Me.lblAddTask.BackColor = System.Drawing.SystemColors.Info
+        Me.lblAddTask.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.lblAddTask.Font = New System.Drawing.Font("Bell MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAddTask.ForeColor = System.Drawing.Color.White
         Me.lblAddTask.Location = New System.Drawing.Point(633, 207)
         Me.lblAddTask.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAddTask.Name = "lblAddTask"
@@ -259,8 +261,9 @@ Partial Class MainDashboard
         'lblYourTask
         '
         Me.lblYourTask.AutoSize = True
-        Me.lblYourTask.BackColor = System.Drawing.SystemColors.Info
+        Me.lblYourTask.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.lblYourTask.Font = New System.Drawing.Font("Bell MT", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblYourTask.ForeColor = System.Drawing.Color.White
         Me.lblYourTask.Location = New System.Drawing.Point(219, 207)
         Me.lblYourTask.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblYourTask.Name = "lblYourTask"
@@ -270,7 +273,7 @@ Partial Class MainDashboard
         '
         'PictureBox2
         '
-        Me.PictureBox2.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.PictureBox2.Location = New System.Drawing.Point(506, 261)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(369, 247)
@@ -280,9 +283,10 @@ Partial Class MainDashboard
         'lblSelectRole
         '
         Me.lblSelectRole.AutoSize = True
-        Me.lblSelectRole.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.lblSelectRole.BackColor = System.Drawing.Color.FromArgb(CType(CType(193, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.lblSelectRole.Font = New System.Drawing.Font("Bell MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSelectRole.Location = New System.Drawing.Point(525, 372)
+        Me.lblSelectRole.ForeColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.lblSelectRole.Location = New System.Drawing.Point(538, 372)
         Me.lblSelectRole.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSelectRole.Name = "lblSelectRole"
         Me.lblSelectRole.Size = New System.Drawing.Size(131, 28)
@@ -292,7 +296,7 @@ Partial Class MainDashboard
         'btnDeleteHistory
         '
         Me.btnDeleteHistory.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDeleteHistory.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.btnDeleteHistory.ForeColor = System.Drawing.Color.Black
         Me.btnDeleteHistory.Location = New System.Drawing.Point(915, 515)
         Me.btnDeleteHistory.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDeleteHistory.Name = "btnDeleteHistory"
@@ -304,7 +308,7 @@ Partial Class MainDashboard
         'btnRestoreTask
         '
         Me.btnRestoreTask.Font = New System.Drawing.Font("Bell MT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRestoreTask.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.btnRestoreTask.ForeColor = System.Drawing.Color.Black
         Me.btnRestoreTask.Location = New System.Drawing.Point(1081, 515)
         Me.btnRestoreTask.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRestoreTask.Name = "btnRestoreTask"
@@ -317,7 +321,7 @@ Partial Class MainDashboard
         '
         Me.dtpTaskDate.CustomFormat = "yyyy-MM-dd"
         Me.dtpTaskDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpTaskDate.Location = New System.Drawing.Point(675, 330)
+        Me.dtpTaskDate.Location = New System.Drawing.Point(677, 330)
         Me.dtpTaskDate.Name = "dtpTaskDate"
         Me.dtpTaskDate.Size = New System.Drawing.Size(177, 22)
         Me.dtpTaskDate.TabIndex = 32
@@ -326,13 +330,12 @@ Partial Class MainDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1296, 710)
         Me.Controls.Add(Me.dtpTaskDate)
         Me.Controls.Add(Me.btnRestoreTask)
         Me.Controls.Add(Me.btnDeleteHistory)
         Me.Controls.Add(Me.lblSelectRole)
-        Me.Controls.Add(Me.HScrollBar1)
         Me.Controls.Add(Me.cbEmployee)
         Me.Controls.Add(Me.cbTeacher)
         Me.Controls.Add(Me.cbStudent)
@@ -353,6 +356,7 @@ Partial Class MainDashboard
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.ForeColor = System.Drawing.Color.White
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MainDashboard"
         Me.Text = "MainDashboard"
@@ -378,7 +382,6 @@ Partial Class MainDashboard
     Friend WithEvents cbStudent As CheckBox
     Friend WithEvents cbTeacher As CheckBox
     Friend WithEvents cbEmployee As CheckBox
-    Friend WithEvents HScrollBar1 As HScrollBar
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblAddTask As Label
     Friend WithEvents lblYourTask As Label
