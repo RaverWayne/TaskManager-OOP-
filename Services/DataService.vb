@@ -1,5 +1,4 @@
-﻿' DataService.vb
-Imports Newtonsoft.Json
+﻿Imports Newtonsoft.Json
 Imports System.IO
 Imports System.Linq
 
@@ -8,7 +7,7 @@ Public Class DataService
     Private _users As New List(Of User)()
 
     Public Sub New()
-        ' DEBUG: Print the full path where the DataFile is expected
+
         Console.WriteLine($"DEBUG: DataService initialized. Expected DataFile path: {Path.GetFullPath(DataFile)}")
         LoadUsers()
         Console.WriteLine($"DEBUG: After LoadUsers(), current user count: {_users.Count}")
@@ -19,10 +18,9 @@ Public Class DataService
 
         If Not _users.Any() Then
             Console.WriteLine("DEBUG: _users list is empty. Authentication will return Nothing.")
-            Return Nothing ' No users registered yet in the system
+            Return Nothing
         End If
 
-        ' Find a user matching credentials (username case-insensitive, password case-sensitive)
         Dim authenticatedUser = _users.FirstOrDefault(
             Function(u) String.Equals(u.Username, username, StringComparison.OrdinalIgnoreCase) AndAlso
                         u.Password = password)
@@ -50,12 +48,12 @@ Public Class DataService
             Return False
         End If
 
-        ' Check for duplicate username (case-insensitive to prevent "admin" and "Admin" conflicts)
+
         If _users.Any(Function(u) String.Equals(u.Username, user.Username, StringComparison.OrdinalIgnoreCase)) Then
             Console.WriteLine($"DEBUG: Registration failed - Username '{user.Username}' already exists.")
             Return False
         ElseIf _users Is Nothing Then
-            ' This case should be handled by LoadUsers initializing _users, but as a fallback
+
             _users = New List(Of User)()
         End If
 
@@ -70,27 +68,26 @@ Public Class DataService
         If File.Exists(DataFile) Then
             Try
                 Dim settings = New JsonSerializerSettings With {
-                    .TypeNameHandling = TypeNameHandling.Auto, ' Crucial for deserializing derived types (Student, Teacher, Employee)
-                    .NullValueHandling = NullValueHandling.Ignore ' Ignore null properties during deserialization
+                    .TypeNameHandling = TypeNameHandling.Auto,
+                    .NullValueHandling = NullValueHandling.Ignore
                 }
-                ' Attempt to deserialize. If the file is corrupted or empty/malformed, this will go to Catch.
+
                 _users = JsonConvert.DeserializeObject(Of List(Of User))(
                     File.ReadAllText(DataFile), settings)
 
-                ' Ensure _users list is never Nothing after loading, even if the file was empty or corrupted
                 If _users Is Nothing Then
                     _users = New List(Of User)()
                     Console.WriteLine("DEBUG: Deserialization resulted in Nothing or empty list. Initializing empty list.")
                 End If
                 Console.WriteLine($"DEBUG: Successfully loaded {_users.Count} users from {Path.GetFullPath(DataFile)}.")
             Catch ex As Exception
-                ' THIS IS WHERE YOU WILL SEE ERRORS RELATED TO CORRUPTED users.json FILE
+
                 Console.WriteLine($"DEBUG ERROR: Failed to load users from {Path.GetFullPath(DataFile)}: {ex.Message}")
                 Console.WriteLine($"DEBUG ERROR StackTrace: {ex.StackTrace}")
-                _users = New List(Of User)() ' Initialize an empty list on error to prevent NullReferenceException later
+                _users = New List(Of User)()
             End Try
         Else
-            _users = New List(Of User)() ' Initialize if file doesn't exist (first run)
+            _users = New List(Of User)()
             Console.WriteLine($"DEBUG: {Path.GetFullPath(DataFile)} does not exist. Initializing empty user list.")
         End If
     End Sub
@@ -99,13 +96,13 @@ Public Class DataService
         Try
             Dim settings As New JsonSerializerSettings With {
                 .TypeNameHandling = TypeNameHandling.Auto,
-                .Formatting = Formatting.Indented, ' Makes the JSON file human-readable
-                .NullValueHandling = NullValueHandling.Ignore ' Do not write null properties to the JSON file
+                .Formatting = Formatting.Indented,
+                .NullValueHandling = NullValueHandling.Ignore
             }
             File.WriteAllText(DataFile, JsonConvert.SerializeObject(_users, settings))
             Console.WriteLine($"DEBUG: Successfully saved {_users.Count} users to {Path.GetFullPath(DataFile)}.")
         Catch ex As Exception
-            ' THIS IS WHERE YOU WILL SEE ERRORS IF SAVING FAILS (e.g., permissions, disk full)
+
             Console.WriteLine($"DEBUG ERROR: Failed to save users to {Path.GetFullPath(DataFile)}: {ex.Message}")
             Console.WriteLine($"DEBUG ERROR StackTrace: {ex.StackTrace}")
         End Try

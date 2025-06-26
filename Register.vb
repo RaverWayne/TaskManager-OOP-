@@ -1,8 +1,8 @@
 ﻿Public Class Register
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
-        ' --- Input Validation ---
-        If String.IsNullOrWhiteSpace(txtbUserName.Text) OrElse ' Using txtbUserName
-           String.IsNullOrWhiteSpace(txtbPassword.Text) Then  ' Using txtbPassword
+
+        If String.IsNullOrWhiteSpace(txtbUserName.Text) OrElse
+           String.IsNullOrWhiteSpace(txtbPassword.Text) Then
             MessageBox.Show("Username and password are required.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
@@ -18,11 +18,11 @@
         End If
 
         Dim selectedRole As String = ""
-        If cbStudent.Checked Then    ' Using cbStudent
+        If cbStudent.Checked Then
             selectedRole = "Student"
-        ElseIf cbTeacher.Checked Then ' Using cbTeacher
+        ElseIf cbTeacher.Checked Then
             selectedRole = "Teacher"
-        ElseIf cbEmployee.Checked Then ' Using cbEmployee
+        ElseIf cbEmployee.Checked Then
             selectedRole = "Employee"
         End If
 
@@ -32,17 +32,17 @@
         End If
 
         Dim selectedGender As String = ""
-        If rbMale.Checked Then    ' Using rbMale
+        If rbMale.Checked Then
             selectedGender = "Male"
-        ElseIf rbFemale.Checked Then ' Using rbFemale
+        ElseIf rbFemale.Checked Then
             selectedGender = "Female"
-        ElseIf rbOther.Checked Then  ' Using rbOther
+        ElseIf rbOther.Checked Then
             selectedGender = "Other"
         Else
-            selectedGender = "Not Specified" ' Default if none selected
+            selectedGender = "Not Specified"
         End If
 
-        ' --- Create User Object based on Selected Role ---
+
         Dim newUser As User = Nothing
         Select Case selectedRole
             Case "Student"
@@ -53,15 +53,15 @@
                 newUser = New Employee()
         End Select
 
-        ' --- Populate User Properties ---
-        newUser.Username = txtbUserName.Text.Trim() ' Using txtbUserName
-        newUser.Password = txtbPassword.Text.Trim() ' Using txtbPassword
-        newUser.Age = ageValue
-        newUser.Birthday = dtpBirthday.Value.ToString("yyyy-MM-dd") ' Using dtpBirthday
-        newUser.Gender = selectedGender
-        ' Role is already set by the derived class constructor (e.g., New Student() sets Role = "Student")
 
-        ' --- Attempt Registration via DataService ---
+        newUser.Username = txtbUserName.Text.Trim()
+        newUser.Password = txtbPassword.Text.Trim()
+        newUser.Age = ageValue
+        newUser.Birthday = dtpBirthday.Value.ToString("yyyy-MM-dd")
+        newUser.Gender = selectedGender
+
+
+
         Try
             Dim dataService As New DataService()
             Dim registrationSuccess As Boolean = dataService.RegisterUser(newUser)
@@ -70,40 +70,40 @@
                 MessageBox.Show("Registration successful! Please login with your new account.",
                                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                ClearForm() ' Clear registration form fields
+                ClearForm()
                 Dim loginForm As New Login()
-                loginForm.Show() ' Go back to the login form
-                Me.Close()       ' Close the registration form
+                loginForm.Show()
+                Me.Close()
             Else
-                ' This branch is hit if RegisterUser returns False (e.g., username already exists)
+
                 MessageBox.Show("Registration failed. This username might already exist, or there was an issue saving data. Check console for details.",
                                 "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Catch ex As Exception
-            ' Catch any unexpected errors during the registration process
+
             MessageBox.Show($"An unexpected error occurred during registration: {ex.Message}", "Application Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Console.WriteLine($"ERROR: Unexpected exception during registration: {ex.Message}")
             Console.WriteLine(ex.StackTrace)
         End Try
     End Sub
 
-    ' Helper method to clear all input fields on the form
+
     Private Sub ClearForm()
-        txtbUserName.Clear() ' Using txtbUserName
-        txtbPassword.Clear() ' Using txtbPassword
-        txtbAge.Clear()      ' Using txtbAge
-        dtpBirthday.Value = DateTime.Now ' Using dtpBirthday
+        txtbUserName.Clear()
+        txtbPassword.Clear()
+        txtbAge.Clear()
+        dtpBirthday.Value = DateTime.Now
         cbStudent.Checked = False
         cbTeacher.Checked = False
         cbEmployee.Checked = False
         rbMale.Checked = False
         rbFemale.Checked = False
-        rbOther.Checked = False ' Using rbOther
-        txtbUserName.Focus() ' Set focus back to username field
+        rbOther.Checked = False
+        txtbUserName.Focus()
     End Sub
 
-    ' Handles the Back button click event to return to Login
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click ' Using btnBack
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Dim loginForm As New Login()
         loginForm.Show()
         Me.Close()
