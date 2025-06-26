@@ -1,32 +1,45 @@
 ﻿Public Class Login
+
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        ' Validate inputs aren't empty
-        If String.IsNullOrWhiteSpace(txtUsername.Text) OrElse
-           String.IsNullOrWhiteSpace(txtPassword.Text) Then
-            MessageBox.Show("Please enter both username and password",
-                          "Login Failed",
-                          MessageBoxButtons.OK,
-                          MessageBoxIcon.Error)
+
+        If String.IsNullOrWhiteSpace(txtbUserName.Text) OrElse
+           String.IsNullOrWhiteSpace(txtbPassword.Text) Then
+            MessageBox.Show("Please enter both username and password.",
+                            "Login Failed",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
             Return
         End If
 
+
         Dim dataService As New DataService()
-        Dim user = dataService.Authenticate(txtUsername.Text, txtPassword.Text)
+        Dim user = dataService.Authenticate(txtbUserName.Text, txtbPassword.Text)
 
         If user IsNot Nothing Then
-            ' Successful login
+
+            MessageBox.Show($"Welcome, {user.Username} ({user.Role})!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             Dim dashboard As New MainDashboard()
-            dashboard.CurrentUser = user
-            dashboard.Show()
-            Me.Hide()
+            Try
+
+                dashboard.CurrentUser = user
+                dashboard.Show()
+                Me.Hide()
+            Catch ex As Exception
+
+                MessageBox.Show($"An error occurred while preparing the dashboard: {ex.Message}", "Application Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Console.WriteLine($"ERROR: Exception when setting CurrentUser or showing Dashboard: {ex.Message}")
+                Console.WriteLine(ex.StackTrace)
+            End Try
         Else
-            ' Failed login
-            MessageBox.Show("Invalid credentials or no users registered yet",
-                          "Login Failed",
-                          MessageBoxButtons.OK,
-                          MessageBoxIcon.Error)
+
+            MessageBox.Show("Invalid credentials or no users registered yet. Please check your username and password.",
+                            "Login Failed",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
         End If
     End Sub
+
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
         Dim registerForm As New Register()
@@ -35,21 +48,38 @@
     End Sub
 
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles txtUsername.Click
+    Private Sub txtbUserName_TextChanged(sender As Object, e As EventArgs) Handles txtbUserName.TextChanged
+
     End Sub
 
-    Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles txtPassword.Click
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtbUserName.Clear()
+        txtbPassword.Clear()
     End Sub
 
-    Private Sub Label1_Click_2(sender As Object, e As EventArgs) Handles lblTaskManager.Click
+    Private Sub Login_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+
+        txtbUserName.Clear()
+        txtbPassword.Clear()
+        txtbUserName.Focus()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
     End Sub
 
-    Private Sub Label1_Click_3(sender As Object, e As EventArgs) Handles lblWelcome.Click
+    Private Sub lblWelcome_Click(sender As Object, e As EventArgs) Handles lblWelcome.Click
+
     End Sub
 
-    Private Sub Label1_Click_4(sender As Object, e As EventArgs)
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?",
+                                              "Exit Application",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class

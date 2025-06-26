@@ -50,7 +50,7 @@ Partial Class Register
         '
         'Picturebox2
         '
-        Me.Picturebox2.BackColor = System.Drawing.SystemColors.Info
+        Me.Picturebox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.Picturebox2.Location = New System.Drawing.Point(811, 1)
         Me.Picturebox2.Name = "Picturebox2"
         Me.Picturebox2.Size = New System.Drawing.Size(440, 697)
@@ -61,10 +61,10 @@ Partial Class Register
         '
         Me.lblWelcome.AccessibleName = ""
         Me.lblWelcome.AutoSize = True
-        Me.lblWelcome.BackColor = System.Drawing.SystemColors.Info
+        Me.lblWelcome.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.lblWelcome.Font = New System.Drawing.Font("Bell MT", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.ForeColor = System.Drawing.Color.Black
-        Me.lblWelcome.Location = New System.Drawing.Point(916, 78)
+        Me.lblWelcome.ForeColor = System.Drawing.Color.White
+        Me.lblWelcome.Location = New System.Drawing.Point(862, 108)
         Me.lblWelcome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(257, 42)
@@ -75,23 +75,23 @@ Partial Class Register
         '
         Me.txtUsername.AccessibleName = ""
         Me.txtUsername.AutoSize = True
-        Me.txtUsername.BackColor = System.Drawing.SystemColors.Info
+        Me.txtUsername.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.txtUsername.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.Black
-        Me.txtUsername.Location = New System.Drawing.Point(865, 199)
+        Me.txtUsername.Location = New System.Drawing.Point(869, 199)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(102, 24)
+        Me.txtUsername.Size = New System.Drawing.Size(98, 24)
         Me.txtUsername.TabIndex = 11
-        Me.txtUsername.Text = "UserName:"
+        Me.txtUsername.Text = "Username:"
         '
         'txtPassword
         '
         Me.txtPassword.AutoSize = True
-        Me.txtPassword.BackColor = System.Drawing.SystemColors.Info
+        Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.txtPassword.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.ForeColor = System.Drawing.Color.Black
-        Me.txtPassword.Location = New System.Drawing.Point(873, 238)
+        Me.txtPassword.Location = New System.Drawing.Point(869, 238)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(94, 24)
@@ -117,10 +117,10 @@ Partial Class Register
         'txtAge
         '
         Me.txtAge.AutoSize = True
-        Me.txtAge.BackColor = System.Drawing.SystemColors.Info
+        Me.txtAge.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.txtAge.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAge.ForeColor = System.Drawing.Color.Black
-        Me.txtAge.Location = New System.Drawing.Point(919, 285)
+        Me.txtAge.Location = New System.Drawing.Point(919, 274)
         Me.txtAge.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.Size = New System.Drawing.Size(48, 24)
@@ -130,10 +130,10 @@ Partial Class Register
         'lblRoles
         '
         Me.lblRoles.AutoSize = True
-        Me.lblRoles.BackColor = System.Drawing.SystemColors.Info
+        Me.lblRoles.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.lblRoles.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblRoles.ForeColor = System.Drawing.Color.Black
-        Me.lblRoles.Location = New System.Drawing.Point(859, 484)
+        Me.lblRoles.Location = New System.Drawing.Point(865, 456)
         Me.lblRoles.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRoles.Name = "lblRoles"
         Me.lblRoles.Size = New System.Drawing.Size(108, 24)
@@ -142,7 +142,7 @@ Partial Class Register
         '
         'txtbAge
         '
-        Me.txtbAge.Location = New System.Drawing.Point(985, 287)
+        Me.txtbAge.Location = New System.Drawing.Point(985, 276)
         Me.txtbAge.Margin = New System.Windows.Forms.Padding(4)
         Me.txtbAge.Name = "txtbAge"
         Me.txtbAge.Size = New System.Drawing.Size(205, 22)
@@ -151,10 +151,10 @@ Partial Class Register
         'lblGender
         '
         Me.lblGender.AutoSize = True
-        Me.lblGender.BackColor = System.Drawing.SystemColors.Info
+        Me.lblGender.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.lblGender.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblGender.ForeColor = System.Drawing.Color.Black
-        Me.lblGender.Location = New System.Drawing.Point(891, 385)
+        Me.lblGender.Location = New System.Drawing.Point(891, 362)
         Me.lblGender.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblGender.Name = "lblGender"
         Me.lblGender.Size = New System.Drawing.Size(76, 24)
@@ -164,9 +164,9 @@ Partial Class Register
         'rbMale
         '
         Me.rbMale.AutoSize = True
-        Me.rbMale.BackColor = System.Drawing.SystemColors.Info
+        Me.rbMale.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.rbMale.ForeColor = System.Drawing.Color.Black
-        Me.rbMale.Location = New System.Drawing.Point(985, 385)
+        Me.rbMale.Location = New System.Drawing.Point(985, 366)
         Me.rbMale.Name = "rbMale"
         Me.rbMale.Size = New System.Drawing.Size(58, 20)
         Me.rbMale.TabIndex = 21
@@ -177,8 +177,8 @@ Partial Class Register
         'rbFemale
         '
         Me.rbFemale.AutoSize = True
-        Me.rbFemale.BackColor = System.Drawing.SystemColors.Info
-        Me.rbFemale.Location = New System.Drawing.Point(985, 411)
+        Me.rbFemale.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.rbFemale.Location = New System.Drawing.Point(985, 392)
         Me.rbFemale.Name = "rbFemale"
         Me.rbFemale.Size = New System.Drawing.Size(74, 20)
         Me.rbFemale.TabIndex = 22
@@ -189,8 +189,8 @@ Partial Class Register
         'rbOther
         '
         Me.rbOther.AutoSize = True
-        Me.rbOther.BackColor = System.Drawing.SystemColors.Info
-        Me.rbOther.Location = New System.Drawing.Point(985, 437)
+        Me.rbOther.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.rbOther.Location = New System.Drawing.Point(985, 418)
         Me.rbOther.Name = "rbOther"
         Me.rbOther.Size = New System.Drawing.Size(60, 20)
         Me.rbOther.TabIndex = 23
@@ -201,8 +201,8 @@ Partial Class Register
         'cbStudent
         '
         Me.cbStudent.AutoSize = True
-        Me.cbStudent.BackColor = System.Drawing.SystemColors.Info
-        Me.cbStudent.Location = New System.Drawing.Point(985, 488)
+        Me.cbStudent.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.cbStudent.Location = New System.Drawing.Point(985, 456)
         Me.cbStudent.Name = "cbStudent"
         Me.cbStudent.Size = New System.Drawing.Size(74, 20)
         Me.cbStudent.TabIndex = 24
@@ -212,8 +212,8 @@ Partial Class Register
         'cbTeacher
         '
         Me.cbTeacher.AutoSize = True
-        Me.cbTeacher.BackColor = System.Drawing.SystemColors.Info
-        Me.cbTeacher.Location = New System.Drawing.Point(985, 514)
+        Me.cbTeacher.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
+        Me.cbTeacher.Location = New System.Drawing.Point(985, 482)
         Me.cbTeacher.Name = "cbTeacher"
         Me.cbTeacher.Size = New System.Drawing.Size(80, 20)
         Me.cbTeacher.TabIndex = 25
@@ -223,9 +223,9 @@ Partial Class Register
         'cbEmployee
         '
         Me.cbEmployee.AutoSize = True
-        Me.cbEmployee.BackColor = System.Drawing.SystemColors.Info
+        Me.cbEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.cbEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.cbEmployee.Location = New System.Drawing.Point(985, 540)
+        Me.cbEmployee.Location = New System.Drawing.Point(985, 508)
         Me.cbEmployee.Name = "cbEmployee"
         Me.cbEmployee.Size = New System.Drawing.Size(91, 20)
         Me.cbEmployee.TabIndex = 26
@@ -237,10 +237,10 @@ Partial Class Register
         Me.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnRegister.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegister.ForeColor = System.Drawing.Color.Black
-        Me.btnRegister.Location = New System.Drawing.Point(863, 593)
+        Me.btnRegister.Location = New System.Drawing.Point(895, 566)
         Me.btnRegister.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(127, 36)
+        Me.btnRegister.Size = New System.Drawing.Size(127, 33)
         Me.btnRegister.TabIndex = 27
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = True
@@ -250,7 +250,7 @@ Partial Class Register
         Me.btnBack.BackColor = System.Drawing.Color.Transparent
         Me.btnBack.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.Black
-        Me.btnBack.Location = New System.Drawing.Point(1024, 593)
+        Me.btnBack.Location = New System.Drawing.Point(1040, 566)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(150, 33)
@@ -262,8 +262,8 @@ Partial Class Register
         '
         Me.lblTaskManager.AutoSize = True
         Me.lblTaskManager.Font = New System.Drawing.Font("Bell MT", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTaskManager.ForeColor = System.Drawing.SystemColors.Info
-        Me.lblTaskManager.Location = New System.Drawing.Point(142, 88)
+        Me.lblTaskManager.ForeColor = System.Drawing.Color.White
+        Me.lblTaskManager.Location = New System.Drawing.Point(146, 72)
         Me.lblTaskManager.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTaskManager.Name = "lblTaskManager"
         Me.lblTaskManager.Size = New System.Drawing.Size(496, 49)
@@ -272,7 +272,7 @@ Partial Class Register
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.Info
+        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.PictureBox1.Location = New System.Drawing.Point(71, 207)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(658, 419)
@@ -283,7 +283,7 @@ Partial Class Register
         '
         Me.dtpBirthday.CustomFormat = "yyyy-MM-dd"
         Me.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpBirthday.Location = New System.Drawing.Point(985, 331)
+        Me.dtpBirthday.Location = New System.Drawing.Point(985, 316)
         Me.dtpBirthday.Name = "dtpBirthday"
         Me.dtpBirthday.Size = New System.Drawing.Size(205, 22)
         Me.dtpBirthday.TabIndex = 31
@@ -291,10 +291,10 @@ Partial Class Register
         'lblBirthday
         '
         Me.lblBirthday.AutoSize = True
-        Me.lblBirthday.BackColor = System.Drawing.SystemColors.Info
+        Me.lblBirthday.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(145, Byte), Integer))
         Me.lblBirthday.Font = New System.Drawing.Font("Bell MT", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBirthday.ForeColor = System.Drawing.Color.Black
-        Me.lblBirthday.Location = New System.Drawing.Point(880, 329)
+        Me.lblBirthday.Location = New System.Drawing.Point(880, 314)
         Me.lblBirthday.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBirthday.Name = "lblBirthday"
         Me.lblBirthday.Size = New System.Drawing.Size(87, 24)
@@ -305,7 +305,7 @@ Partial Class Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1247, 694)
         Me.Controls.Add(Me.lblBirthday)
         Me.Controls.Add(Me.dtpBirthday)

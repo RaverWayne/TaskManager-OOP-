@@ -92,6 +92,7 @@
     <Compile Include="Models\Employee.vb" />
     <Compile Include="Models\Student.vb" />
     <Compile Include="Models\Task.vb" />
+    <Compile Include="Models\TaskService.vb" />
     <Compile Include="Models\Teacher.vb" />
     <Compile Include="Models\User.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
